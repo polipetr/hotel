@@ -40,7 +40,7 @@
                         <div class="hl-2"></div>
                         <div class="hl-3"></div>
                     </div>
-                    <p>Every hotel stay provides you with great experience and hospitality.</p>
+                    <p>Чудесен хотел.</p>
                 </div>
             </div>
             <div class="row">

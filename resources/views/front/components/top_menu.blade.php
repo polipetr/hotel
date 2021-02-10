@@ -3,9 +3,9 @@
         <div class="row">
             <div class="top-bar">
                 <ul>
-                    <li><a href="#">Phone No:  {{ config('app.phone_number', '977-9866893439') }}</a>
+                    <li><a href="#">Телефон:  {{ config('app.phone_number', '977-9866893439') }}</a>
                     </li>
-                    <li><a class='dropdown-button' href='#' data-activates='dropdown1'> My Account <i
+                    <li><a class='dropdown-button' href='#' data-activates='dropdown1'> Моят акоунт <i
                                     class="fa fa-angle-down"></i></a>
                     </li>
                 </ul>
@@ -16,18 +16,18 @@
             <ul id='dropdown1' class='dropdown-content drop-con-man'>
                 @if(Auth::user()->role == "admin")
                     <li>
-                        <a href="{{ url('/admin') }}"><img src="{{ asset("front/images/icon/2.png") }}" alt=""> Admin Panel</a>
+                        <a href="{{ url('/admin') }}"><img src="{{ asset("front/images/icon/2.png") }}" alt=""> Админ панел</a>
                     </li>
                 @endif
                 <li>
-                    <a href="{{ url('/dashboard') }}"><img src="{{ asset("front/images/icon/15.png") }}" alt=""> User Dashboard</a>
+                    <a href="{{ url('/dashboard') }}"><img src="{{ asset("front/images/icon/15.png") }}" alt=""> Потребител даска</a>
                 </li>
                 <li>
                     <a href="{{ url('/dashboard/room/booking') }}"><img src="{{ asset("front/images/icon/1.png") }}" alt=""> My
                         Room Bookings</a>
                 </li>
                 <li>
-                    <a href="{{ url('/dashboard/event/booking') }}"><img src="{{ asset("front/images/icon/17.png") }}" alt=""> My Event Bookings</a>
+                    <a href="{{ url('/dashboard/event/booking') }}"><img src="{{ asset("front/images/icon/17.png") }}" alt=""> Моите резервации</a>
                 </li>
                 <li>
                     <a href="{{ route('logout') }}"
