@@ -4,8 +4,7 @@
     <div class="mm">
         <div class="mm-inn">
             <div class="mm-logo">
-                <a href="main.html"><img src="{{ asset("front/images/logo.png") }}" alt="">
-                </a>
+               ПГХТ Сливен
             </div>
             <div class="mm-icon"><span><i class="fa fa-bars show-menu" aria-hidden="true"></i></span>
             </div>
