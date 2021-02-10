@@ -2,7 +2,7 @@
     <!--TOP SECTION-->
     <div class="row">
         <div class="logo">
-            <a href="{{ url('/') }}"><img src="{{ asset("front/images/logo.png") }}" alt=""/>
+           ПГХТ Сливен
             </a>
         </div>
         <div class="menu-bar">
