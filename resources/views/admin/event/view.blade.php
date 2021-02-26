@@ -18,14 +18,14 @@
                             </div>
                             <table id="bootstrap-table" class="table">
                                 <thead>
-                                <th data-field="sn" class="text-center">S.N.</th>
-                                <th data-field="name" class="text-center">Name</th>
-                                <th data-field="image" class="text-center">Image</th>
-                                <th data-field="venue" class="text-center">Venue</th>
-                                <th data-field="price">Price</th>
-                                <th data-field="capacity">Capacity</th>
-                                <th data-field="status" data-sortable="true">Status</th>
-                                <th data-field="actions" class="td-actions text-right">Actions
+                                <th data-field="sn" class="text-center">Г.Н.</th>
+                                <th data-field="name" class="text-center">Име</th>
+                                <th data-field="image" class="text-center">Картинка</th>
+                                <th data-field="venue" class="text-center">Място</th>
+                                <th data-field="price">Цена</th>
+                                <th data-field="capacity">Капацитет</th>
+                                <th data-field="status" data-sortable="true">Статус</th>
+                                <th data-field="actions" class="td-actions text-right">Действие
                                 </th>
                                 </thead>
                                 <tbody>
@@ -42,9 +42,9 @@
                                                 <td><span class="btn btn-default btn-xs">{{ $event->capacity }}</span></td>
                                                 <td>
                                                     @if($event->status == 1)
-                                                        <button class="btn btn-success btn-xs btn-fill">Active</button>
+                                                        <button class="btn btn-success btn-xs btn-fill">Статус</button>
                                                     @else
-                                                        <button class="btn btn-default btn-xs btn-fill">Inactive
+                                                        <button class="btn btn-default btn-xs btn-fill">Неактивен
                                                         </button>
                                                     @endif
                                                 </td>

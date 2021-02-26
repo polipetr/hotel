@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Add Event to Menu</h4>
+                            <h4 class="title">Добавяне на събитие</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/event/', 'id' => 'event-add-form', 'files' => true)) !!}
@@ -19,7 +19,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Event Name<star>*</star></label>
+                                        <label>Име на събитието<star>*</star></label>
                                         <input type="text" name="name" class="form-control border-input"
                                                placeholder="Ex: Holi 2018" value="{{ old('name') }}">
                                     </div>
@@ -28,7 +28,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Image<star>*</star></label>
+                                        <label>Картинка<star>*</star></label>
                                         <input type="file" name="image" class="form-control border-input">
                                     </div>
                                 </div>
@@ -36,14 +36,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Price<star>*</star></label>
+                                        <label>Цена<star>*</star></label>
                                         <input type="text" name="price" class="form-control border-input"
                                                placeholder="Ex: 500" value="{{ old('price') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Capacity<star>*</star></label>
+                                        <label>Капацитет<star>*</star></label>
                                         <input type="text" name="capacity" class="form-control border-input"
                                                placeholder="Ex: 300" value="{{ old('capacity') }}">
                                     </div>
@@ -52,13 +52,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Date<star>*</star></label>
+                                        <label>Дата<star>*</star></label>
                                         <input type="text" name="date" class="form-control datepicker" value="{{ old('date') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Venue<star>*</star></label>
+                                        <label>Място<star>*</star></label>
                                         <input type="text" name="venue" class="form-control border-input"
                                                placeholder="Ex: Birdview Terrace, Hotel Main" value="{{ old('venue') }}">
                                     </div>
@@ -67,7 +67,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Description</label>
+                                        <label>Описание</label>
                                         <textarea name="description" rows="5" class="form-control border-input"
                                                   placeholder="">{{ old('description') }}</textarea>
                                     </div>
@@ -76,7 +76,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Status</label>
+                                        <label>Статус</label>
                                         <select name="status" id="status" class="form-control">
                                             <option value="1"
                                                     @if (Input::old('status') == '1') selected="selected" @endif>Active
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-info btn-fill btn-wd">Add Event
+                                <button type="submit" class="btn btn-info btn-fill btn-wd">Добавяне на събитие
                                 </button>
                             </div>
                             <div class="clearfix"></div>

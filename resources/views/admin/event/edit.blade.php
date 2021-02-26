@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Edit Event from Menu</h4>
+                            <h4 class="title">Редактиране на събитие</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/event/'.$event->id, 'id' => 'event-edit-form', 'files' => true)) !!}
@@ -19,7 +19,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Event Name<star>*</star></label>
+                                        <label>Име<star>*</star></label>
                                         <input type="text" name="name" class="form-control border-input" value="{{ $event->name }}">
                                     </div>
                                 </div>
@@ -32,7 +32,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Image</label>
+                                        <label>Картинка</label>
                                         <input type="file" name="image" class="form-control border-input">
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Price<star>*</star></label>
+                                        <label>Цена<star>*</star></label>
                                         <input type="text" name="price" class="form-control border-input"
                                                placeholder="Ex: 500" value="{{ $event->price }}">
                                     </div>
@@ -56,13 +56,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Date<star>*</star></label>
+                                        <label>Дата<star>*</star></label>
                                         <input type="text" name="date" class="form-control datepicker" value="{{$event->date}}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Venue<star>*</star></label>
+                                        <label>Място<star>*</star></label>
                                         <input type="text" name="venue" class="form-control border-input"
                                                placeholder="Ex: 500" value="{{ $event->venue }}">
                                     </div>
@@ -71,7 +71,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Description</label>
+                                        <label>Описание</label>
                                         <textarea name="description" rows="5" class="form-control border-input"
                                                   placeholder="">{{ $event->description }}</textarea>
                                     </div>
@@ -80,7 +80,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Status</label>
+                                        <label>Статус</label>
                                         <select name="status" id="status" class="form-control">
                                             <option value="1"
                                                     @if ($event->status == '1') selected="selected" @endif>Active
