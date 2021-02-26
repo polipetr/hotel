@@ -54,8 +54,8 @@
                             </a>
                             <div @if (Request::is('admin/'.strtolower($item['name']).'/create*') || Request::is('admin/'.strtolower($item['name']))) class="collapse in" @else class="collapse" @endif id="componentsExamples">
                                 <ul class="nav">
-                                    <li @if (Request::is('admin/'.strtolower($item['name']).'/create*')) class="active" @endif><a href="{{ url($item['actions']['add'])}}">Add</a></li>
-                                    <li @if (Request::is('admin/'.strtolower($item['name']))) class="active" @endif><a href="{{ url($item['actions']['view'])}}">View</a>
+                                    <li @if (Request::is('admin/'.strtolower($item['name']).'/create*')) class="active" @endif><a href="{{ url($item['actions']['add'])}}">Добави</a></li>
+                                    <li @if (Request::is('admin/'.strtolower($item['name']))) class="active" @endif><a href="{{ url($item['actions']['view'])}}">Виж</a>
                                     </li>
                                 </ul>
                             </div>
@@ -70,8 +70,8 @@
                                 </a>
                                 <div @if (Request::is('admin/'.strtolower($item['name']).'/*')) class="collapse in" @else class="collapse" @endif id="componentsExamples">
                                     <ul class="nav">
-                                        <li @if (Request::is('admin/'.strtolower($item['name']).'/room_booking')) class="active" @endif><a href="{{ url($item['actions']['room_booking'])}}">Room Bookings</a></li>
-                                        <li @if (Request::is('admin/'.strtolower($item['name']).'/event_booking')) class="active" @endif><a href="{{ url($item['actions']['event_booking'])}}">Event Bookings</a></li>
+                                        <li @if (Request::is('admin/'.strtolower($item['name']).'/room_booking')) class="active" @endif><a href="{{ url($item['actions']['room_booking'])}}">Резервирани стаи</a></li>
+                                        <li @if (Request::is('admin/'.strtolower($item['name']).'/event_booking')) class="active" @endif><a href="{{ url($item['actions']['event_booking'])}}">Резервирани събития</a></li>
                                     </ul>
                                 </div>
                             </li>

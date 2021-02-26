@@ -15,7 +15,7 @@ return [
 
     'admin' => [
         'booking' => [
-            'name' =>  'Booking',
+            'name' =>  'Резервация',
             'actions' => [
                 'room_booking' => 'admin/room_booking',
                 'event_booking' =>  'admin/event_booking'
@@ -23,60 +23,67 @@ return [
             'icon' => 'ti-control-forward'
         ],
         'event' => [
-            'name' => 'Event',
+            'name' => 'Събития',
             'actions' => [
                 'view' => 'admin/event',
             ],
             'icon' => 'ti-ticket'
         ],
         'food' => [
-            'name' => 'Food Menu',
+            'name' => 'Meню',
             'actions' => [
                 'view' => 'admin/food',
             ],
             'icon' => 'ti-pencil-alt'
         ],
         'room_type' => [
-            'name' => 'Room Type',
+            'name' => 'Типове стаи',
             'actions' => [
                 'view' => 'admin/room_type',
             ],
             'icon' => 'ti-home'
         ],
         'facility' => [
-            'name' => 'Facility',
+            'name' => 'Помещения',
             'actions' => [
                 'view' => 'admin/facility',
             ],
             'icon' => 'ti-crown'
         ],
         'user' => [
-            'name' => 'User',
+            'name' => 'Потребители',
             'actions' => [
                 'view' => 'admin/user',
             ],
             'icon' => 'ti-user'
         ],
         'slider' => [
-            'name' => 'Slider',
+            'name' => 'Слайдер',
             'actions' => [
                 'view' => 'admin/slider',
             ],
             'icon' => 'ti-layout-grid2'
         ],
         'Review' => [
-            'name' => 'Review',
+            'name' => 'Ревюта',
             'actions' => [
                 'view' => 'admin/review',
             ],
             'icon' => 'ti-star'
         ],
         'Page' => [
-            'name' => 'Page',
+            'name' => 'Страници',
             'actions' => [
                 'view' => 'admin/page',
             ],
             'icon' => 'ti-star'
+        ],
+        'Reporting' => [
+            'name' => 'Статистика',
+            'actions' => [
+                'view' => 'admin/reporting',
+            ],
+            'icon' => 'ti-stats-up'
         ],
     ],
 

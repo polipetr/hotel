@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Add User</h4>
+                            <h4 class="title">Добавяне на потребител</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/user/', 'id' => 'user-add-form', 'files' => true)) !!}
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-info btn-fill btn-wd">Create User</button>
+                                <button type="submit" class="btn btn-info btn-fill btn-wd">Създаване на потрбител</button>
                             </div>
                             <div class="clearfix"></div>
                             {!! Form::close() !!}

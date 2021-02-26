@@ -19,7 +19,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Facility Name<star>*</star></label>
+                                        <label>Име на помещение<star>*</star></label>
                                         <input type="text" name="name" class="form-control border-input"
                                                placeholder="Ex: AC Night Bus" value="{{ old('name') }}">
                                     </div>
@@ -33,23 +33,23 @@
                                             <option selected="" disabled="">- Select Travel Mode -</option>
                                             <option value="AIR"
                                                     @if (Input::old('icon') == 'AIR ') selected="selected" @endif>
-                                                AIR
+                                                Въздушен
                                             </option>
                                             <option value="DRIVING"
                                                     @if (Input::old('icon') == 'DRIVING ') selected="selected" @endif>
-                                                DRIVING
+                                                Шофиране
                                             </option>
                                             <option value="TRANSIT"
                                                     @if (Input::old('icon') == 'TRANSIT') selected="selected" @endif>
-                                                PUBLIC VEHICLE
+                                            Публичен транспорт
                                             </option>
                                             <option value="BICYCLING"
                                                     @if (Input::old('icon') == 'BICYCLING ') selected="selected" @endif>
-                                                BICYCLING
+                                                Колело
                                             </option>
                                             <option value="WALKING"
                                                     @if (Input::old('icon') == 'WALKING') selected="selected" @endif>
-                                                WALKING
+                                              Пеш
                                             </option>
                                         </select>
                                     </div>

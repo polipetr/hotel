@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Add Room with available Room Types</h4>
+                            <h4 class="title">Добавяне на стая</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/room_type/'.$room_type->id.'/room', 'id' => 'room_type-add-form')) !!}
@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-info btn-fill btn-wd">Add Room</button>
+                                <button type="submit" class="btn btn-info btn-fill btn-wd">Добавяне</button>
                             </div>
                             <div class="clearfix"></div>
                             {!! Form::close() !!}

@@ -31,9 +31,9 @@
                                                 <td><img src="{{'/storage/facilities/'.$facility->icon}}" alt=""></td>
                                                 <td>
                                                     @if($facility->status == 1)
-                                                        <button class="btn btn-success btn-xs btn-fill">Active</button>
+                                                        <button class="btn btn-success btn-xs btn-fill">Активен</button>
                                                     @else
-                                                        <button class="btn btn-default btn-xs btn-fill">Inactive
+                                                        <button class="btn btn-default btn-xs btn-fill">Неактивен
                                                         </button>
                                                     @endif
                                                 </td>

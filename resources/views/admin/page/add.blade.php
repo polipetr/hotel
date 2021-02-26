@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Add Page to Menu</h4>
+                            <h4 class="title">Добавяне на страница в менюто</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/page/', 'id' => 'page-add-form', 'files' => true)) !!}

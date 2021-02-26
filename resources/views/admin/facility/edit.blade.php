@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-info btn-fill btn-wd">Update Facility</button>
+                                <button type="submit" class="btn btn-info btn-fill btn-wd">Редактиране</button>
                             </div>
                             <div class="clearfix"></div>
                             {!! Form::close() !!}

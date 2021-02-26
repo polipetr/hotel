@@ -21,14 +21,14 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Event</th>
-                    <th>Venue</th>
-                    <th>Date</th>
-                    <th>No of Tickets</th>
-                    <th>Total Cost</th>
-                    <th>Status</th>
-                    <th>Payment</th>
-                    <th>Action</th>
+                    <th>Събитие</th>
+                    <th>Място</th>
+                    <th>Дата</th>
+                    <th>No на билета</th>
+                    <th>Разходи</th>
+                    <th>Статус</th>
+                    <th>Плащане</th>
+                    <th>Действие</th>
                 </tr>
                 </thead>
                 <tbody>

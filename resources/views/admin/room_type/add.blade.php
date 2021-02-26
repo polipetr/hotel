@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Add Room Type</h4>
+                            <h4 class="title">Добавяне тип на стая</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/room_type/', 'id' => 'room_type-add-form')) !!}
@@ -121,14 +121,14 @@
                                             </option>
                                             <option value="0"
                                                     @if (Input::old('status') == '0') selected="selected" @endif>
-                                                Inactive
+                                                Неактивен
                                             </option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-info btn-fill btn-wd">Add Room Type
+                                <button type="submit" class="btn btn-info btn-fill btn-wd">Добавяне на тип на стая
                                 </button>
                             </div>
                             <div class="clearfix"></div>

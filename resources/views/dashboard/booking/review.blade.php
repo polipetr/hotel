@@ -5,11 +5,11 @@
         <table>
             <thead>
             <tr>
-                <th>Room Number</th>
-                <th>Room</th>
-                <th>Arrived Date</th>
+                <th>Номер на стая</th>
+                <th>Стая</th>
+                <th>Дата на пристигане</th>
                 <th>Booking Status</th>
-                <th>Review Approval Status</th>
+                <th>Статус </th>
             </tr>
             </thead>
             <tbody>

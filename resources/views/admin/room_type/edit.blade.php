@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Edit Room Type</h4>
+                            <h4 class="title">Редакриане на тип</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/room_type/'.$room_type->id, 'id' => 'room_type-add-form')) !!}

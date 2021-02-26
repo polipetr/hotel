@@ -18,14 +18,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>First Name</label>
+                                        <label>Име</label>
                                         <input type="text" name="first_name" class="form-control border-input"
                                                placeholder="ex: Leonardo" value="{{$user->first_name}}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Last Name</label>
+                                        <label>Фамилия</label>
                                         <input type="text" name="last_name" class="form-control border-input"
                                                placeholder="ex: Vinci" value="{{$user->last_name}}">
                                     </div>
@@ -36,18 +36,18 @@
                                     <div class="form-group">
                                         <label>Gender</label>
                                         <select name="gender" id="gender" class="form-control">
-                                            <option selected="" disabled="">- Select Gender -</option>
+                                            <option selected="" disabled="">-Избери пол -</option>
                                             <option value="male"
                                                     @if($user->gender == "male")
                                                     selected="selected"
                                                     @endif
-                                            >Male
+                                            >Мъж
                                             </option>
                                             <option value="female"
                                                     @if($user->gender == "female")
                                                     selected="selected"
                                                     @endif
-                                            >Female
+                                            >Жена
                                             </option>
                                             <option value="others"
                                                     @if($user->gender == "others")
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Phone</label>
+                                        <label>Телефон</label>
                                         <input type="text" name="phone" class="form-control border-input"
                                                placeholder="Phone Number" value="{{$user->phone}}">
                                     </div>
@@ -69,7 +69,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Address</label>
+                                        <label>Адрес</label>
                                         <input type="text" name="address" class="form-control border-input"
                                                placeholder="Home Address" value="{{$user->address}}">
                                     </div>
@@ -78,7 +78,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Avatar</label>
+                                        <label>Аватар</label>
                                         <input type="file" name="avatar" class="form-control border-input">
                                     </div>
                                 </div>

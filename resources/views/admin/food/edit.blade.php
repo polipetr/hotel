@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Edit Food from Menu</h4>
+                            <h4 class="title">Редактиране на меню</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/food/'.$food->id, 'id' => 'food-add-form', 'files' => true)) !!}

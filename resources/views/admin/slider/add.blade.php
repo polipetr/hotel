@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Add Slider Image</h4>
+                            <h4 class="title">Добавяне на картина</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/slider/', 'id' => 'slider-add-form', 'files' => true)) !!}

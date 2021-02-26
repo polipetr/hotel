@@ -78,6 +78,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/room_booking/{id}/edit', 'Admin\RoomBookingController@edit');
     Route::put('/room_booking/{id}/edit', 'Admin\RoomBookingController@update');
 
+    Route::get('/reporting', 'Admin\ReportingController@index');
+
     //Routes for EventBookings
     Route::get('/event_booking', 'Admin\EventBookingController@index');
     Route::get('/event_booking/{id}/edit', 'Admin\EventBookingController@edit');

@@ -9,7 +9,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Update Booking Status</h4>
+                            <h4 class="title">Редактиране на статуса</h4>
                         </div>
                         <div class="content">
                             {!! Form::open(array('url' => 'admin/event_booking/'.$event_booking->id.'/edit')) !!}
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-info btn-fill btn-wd">Update Booking</button>
+                                <button type="submit" class="btn btn-info btn-fill btn-wd">Редактиране на резервация</button>
                             </div>
                             <div class="clearfix"></div>
                             {!! Form::close() !!}
