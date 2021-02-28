@@ -19,7 +19,7 @@
                             <div class="row">
                                 <div class="input-field col s12 m4 l2">
                                     <select>
-                                        <option value="" disabled selected>Select Room</option>
+                                        <option value="" disabled selected>Избери стая</option>
                                         <option value="1">Master Suite</option>
                                         <option value="2">Mini-Suite</option>
                                         <option value="3">Ultra Deluxe</option>

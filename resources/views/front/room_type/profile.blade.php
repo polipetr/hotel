@@ -28,27 +28,34 @@
                         @endif
                             <div class="row">
                                 <div class="col s12 avail-title">
-                                    <h4>Check Availability</h4>
-                                    <p>The final price is calculated by giving {{$room_type->discount_percentage}}% discount, adding {{config('app.service_charge_percentage')}}% service charge and adding {{config('app.vat_percentage')}}% VAT in the room's original price.</p>
+                                    <h4>Провери за свободни</h4>
+                                    <p>Финалната цена се калкулира {{$room_type->discount_percentage}}% discount, adding {{config('app.service_charge_percentage')}}% service charge and adding {{config('app.vat_percentage')}}% ДДС от оригиналнта цена.</p>
                                 </div>
                             </div>
                         <input name="booking_validation" type="hidden" value="0">
 
                         <div class="row">
                                 <div class="input-field col s12 m4 l2">
-                                    <input type="text" style="color: black" value="{{config('app.currency').$room_type->finalPrice }}" class="form-btn" disabled>
+                                    <input type="text" style="color: black" value="{{$room_type->finalPrice  }}" class="form-btn" disabled>
                                 </div>
                                 <div class="input-field col s12 m4 l2">
                                     <select name="number_of_adult">
-                                        <option value="" disabled selected>No of adults</option>
+                                        <option value="" disabled selected>Брой възрастни</option>
                                         @for($i = 1; $i <= $room_type->max_adult; $i++ )
                                         <option value="{{ $i }}" @if (Input::old('number_of_adult') == $i) selected="selected" @endif>{{ $i }}</option>
                                             @endfor
                                     </select>
                                 </div>
                                 <div class="input-field col s12 m4 l2">
+                                    <select name="pay_method">
+                                        <option value="" disabled selected>Начин на плащане</option>
+                                        <option value="Брой" >В брой</option>
+                                        <option value="Карта" >С карта</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s12 m4 l2">
                                     <select name="number_of_child">
-                                        <option value="" disabled selected>No of childs</option>
+                                        <option value="" disabled selected>Брой деца</option>
                                         @for($i = 0; $i <= $room_type->max_adult; $i++ )
                                             <option value="{{ $i }}" @if (Input::old('number_of_child') == $i && Input::old('number_of_child') != 0 ) selected="selected" @endif>{{ $i }}</option>
                                         @endfor
@@ -56,14 +63,14 @@
                                 </div>
                                 <div class="input-field col s12 m4 l2">
                                     <input type="text" id="from" name="arrival_date" value="{{ old('arrival_date') }}">
-                                    <label for="from">Arrival Date</label>
+                                    <label for="from">Дата на пристигане</label>
                                 </div>
                                 <div class="input-field col s12 m4 l2">
                                     <input type="text" id="to" name="departure_date" value="{{ old('departure_date') }}">
-                                    <label for="to">Departure Date</label>
+                                    <label for="to">Дата на напускане</label>
                                 </div>
                                 <div class="input-field col s12 m4 l2">
-                                    <input type="submit" value="submit" class="form-btn">
+                                    <input type="submit" value="Запиши" class="form-btn">
                                 </div>
                             </div>
                         {!! Form::close() !!}
@@ -80,7 +87,7 @@
                     <div class="row">
                         <div class="hp-section">
                             <div class="hp-sub-tit">
-                                <h4><span>{{ $room_type->name }}</span> Room</h4>
+                                <h4><span>{{ $room_type->name }}</span> Стаи</h4>
                             </div>
                             <div class="hp-amini">
                                 <p>{{ $room_type->description }}</p>
@@ -89,8 +96,8 @@
                         @if(count($room_type->facilities) > 0)
                         <div class="hp-section">
                             <div class="hp-sub-tit">
-                                <h4><span>Facilities</span></h4>
-                                <p>All of the following facilities comes with the room.</p>
+                                <h4><span>Помещения</span></h4>
+                                <p></p>
                             </div>
                             <div class="hp-amini">
                                 <ul>
@@ -103,13 +110,13 @@
                         @endif
                         <div class="hp-section">
                             <div class="hp-sub-tit">
-                                <h4><span>Overview</span></h4>
-                                <p>Following the main features of the room</p>
+                                <h4><span>Преглед</span></h4>
+                                <p></p>
                             </div>
                             <div class="hp-over">
                                 <ul class="nav nav-tabs hp-over-nav">
                                     <li class="active">
-                                        <a data-toggle="tab" href="#home"><img src="{{ asset("front/images/icon/a8.png") }}" alt=""> <span class="tab-hide">Overview</span>
+                                        <a data-toggle="tab" href="#home"><img src="{{ asset("front/images/icon/a8.png") }}" alt=""> <span class="tab-hide">Преглед</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -117,11 +124,11 @@
                                     <div id="home" class="tab-pane fade in active tab-space">
                                         <div class="hp-main-overview">
                                             <ul>
-                                                <li>Occupancy: <span>Max {{ $room_type->max_adult + $room_type->max_child }} Persons</span>
+                                                <li>Заетост: <span>Max {{ $room_type->max_adult + $room_type->max_child }} хора</span>
                                                 </li>
-                                                <li>Size : <span>{{ $room_type->size }} sq. feet</span>
+                                                <li>Размер : <span>{{ $room_type->size }} кв.</span>
                                                 </li>
-                                                <li>Room Service : <span>{{  $room_type->room_service==true ? "Available" : "Not Available" }}</span>
+                                                <li>Room Service : <span>{{  $room_type->room_service==true ? "Наличен" : "Няма" }}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -132,8 +139,8 @@
                         @if(count($room_type->images) > 0)
                         <div class="hp-section">
                             <div class="hp-sub-tit">
-                                <h4><span>Photo Gallery</span></h4>
-                                <p>View the actual room by following images.</p>
+                                <h4><span>Галерия</span></h4>
+                                <p>Снумки на стаите.</p>
                             </div>
                             <div class="">
                                 <div class="h-gal">
@@ -150,36 +157,36 @@
                         <div class="hp-section">
                             <div class="hp-sub-tit">
                                 <h4><span>Ratings</span></h4>
-                                <p>If you have good experience with the hotel, please leave a review to recommend others.</p>
+                                <p>Ревю на хотела</p>
                             </div>
                             <div class="hp-review">
                                 <div class="hp-review-left">
                                     <div class="hp-review-left-1">
-                                        <div class="hp-review-left-11">Excellent</div>
+                                        <div class="hp-review-left-11">Чудесен</div>
                                         <div class="hp-review-left-12">
                                             <div class="hp-review-left-13"></div>
                                         </div>
                                     </div>
                                     <div class="hp-review-left-1">
-                                        <div class="hp-review-left-11">Good</div>
+                                        <div class="hp-review-left-11">Добър</div>
                                         <div class="hp-review-left-12">
                                             <div class="hp-review-left-13 hp-review-left-Good"></div>
                                         </div>
                                     </div>
                                     <div class="hp-review-left-1">
-                                        <div class="hp-review-left-11">Satisfactory</div>
+                                        <div class="hp-review-left-11">Задоволителен</div>
                                         <div class="hp-review-left-12">
                                             <div class="hp-review-left-13 hp-review-left-satis"></div>
                                         </div>
                                     </div>
                                     <div class="hp-review-left-1">
-                                        <div class="hp-review-left-11">Below Average</div>
+                                        <div class="hp-review-left-11">Под средния</div>
                                         <div class="hp-review-left-12">
                                             <div class="hp-review-left-13 hp-review-left-below"></div>
                                         </div>
                                     </div>
                                     <div class="hp-review-left-1">
-                                        <div class="hp-review-left-11">Below Average</div>
+                                        <div class="hp-review-left-11">Лош</div>
                                         <div class="hp-review-left-12">
                                             <div class="hp-review-left-13 hp-review-left-poor"></div>
                                         </div>
@@ -194,8 +201,8 @@
                         </div>
                         <div class="hp-section">
                             <div class="hp-sub-tit">
-                                <h4><span>USER</span> REVIEWS</h4>
-                                <p>View all reviews from our customer regarding this room.</p>
+                                <h4><span>Гост</span> REVIEWS</h4>
+                                <p>Разгледай всички отзиви.</p>
                             </div>
                             <div class="lp-ur-all-rat">
                                 <ul>
@@ -225,15 +232,15 @@
                     <!--=========================================-->
                     <div class="hp-call hp-right-com">
                         <div class="hp-call-in"> <img src="{{ asset("front/images/icon/dbc4.png") }}" alt="">
-                            <h3><span>Call us!</span> {{ config('app.phone_number') }}</h3> <small>We are available 24/7 Monday to Sunday</small> <a href="#">Call Now</a> </div>
+                            <h3><span>Call us!</span> {{ config('app.phone_number') }}</h3> <small>Ние сме свободно 24/7 он Подеделник до Неделя</small> <a href="#">Обади се</a> </div>
                     </div>
                     <!--=========================================-->
                     <!--=========================================-->
                     <div class="hp-book hp-right-com">
                         <div class="hp-book-in">
-                            <a href="" id="bookmark_button" class="like-button"><i class="fa fa-heart-o"></i> Bookmark this listing</a> <!--<span>159 people bookmarked this place</span>-->
+                            <a href="" id="bookmark_button" class="like-button"><i class="fa fa-heart-o"></i> Списък</a> <!--<span>159 people bookmarked this place</span>-->
                             <ul>
-                                <li><a href="https://www.facebook.com/sharer.php?u={{ Request::url() }}" rel="me" title="Facebook" target="_blank"><i class="fa fa-facebook"></i> Share</a>
+                                <li><a href="https://www.facebook.com/sharer.php?u={{ Request::url() }}" rel="me" title="Facebook" target="_blank"><i class="fa fa-facebook"></i> Сподели</a>
                                 </li>
                                 <li><a href="https://twitter.com/share?url={{ Request::url() }}&text={{ $room_type->name }}" rel="me" title="Twitter" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
                                 </li>

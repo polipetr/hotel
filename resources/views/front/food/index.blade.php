@@ -5,7 +5,7 @@
     <div class="inn-banner">
         <div class="container">
             <div class="row">
-                <h4>Our Menu</h4>
+                <h4>Нашето меню</h4>
                 <p>View all the continental cuisine offered in our hotel by master chefs.
                 <p>
             </div>

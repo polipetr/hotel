@@ -15,12 +15,13 @@
                             <table id="bootstrap-table" class="table">
                                 <thead>
                                 <th data-field="sn" class="text-center">S.N.</th>
-                                <th data-field="room_number" class="text-center">Room No.</th>
-                                <th data-field="room_type" class="text-center">Type</th>
-                                <th data-field="booked_by" class="text-center">Booked By</th>
-                                <th data-field="status" data-sortable="true">Status</th>
-                                <th data-field="payment" data-sortable="true">Payment</th>
-                                <th data-field="actions" class="td-actions text-right">Actions
+                                <th data-field="room_number" class="text-center">Номер на стая.</th>
+                                <th data-field="room_type" class="text-center">Тип</th>
+                                <th data-field="booked_by" class="text-center">Запазена от</th>
+                                <th data-field="pay_method" data-sortable="true">Наяин на плащане</th>
+                                <th data-field="status" data-sortable="true">Статус</th>
+                                <th data-field="payment" data-sortable="true">Платена</th>
+                                <th data-field="actions" class="td-actions text-right">Действия
                                 </th>
                                 </thead>
                                 <tbody>
@@ -34,6 +35,7 @@
                                                 <td>{{ $room_booking->user->first_name." ".$room_booking->user->last_name }}<br>
                                                     <strong>Email: </strong>{{ $room_booking->user->email }}
                                                 </td>
+                                                <td>{{ $room_booking->pay_method }}</td>
                                                 <td>
                                                     @if($room_booking->status == "pending")
                                                         <button class="btn btn-success btn-xs btn-fill">Pending</button>

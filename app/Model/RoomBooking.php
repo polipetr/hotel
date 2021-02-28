@@ -13,7 +13,7 @@ class RoomBooking extends Model
  */
     protected $table = 'room_bookings';
 
-    protected $fillable = ['arrival_date', 'departure_date', 'room_cost', 'status', 'payment', 'room_id', 'user_id'];
+    protected $fillable = ['arrival_date', 'departure_date', 'room_cost', 'status', 'payment', 'room_id', 'user_id', 'pay_method'];
 
     /**
      * Get the gallery that owns the image.

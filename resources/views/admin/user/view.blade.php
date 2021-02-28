@@ -19,14 +19,15 @@
                             <table id="bootstrap-table" class="table">
                                 <thead>
                                 <th data-field="sn" class="text-center">S.N.</th>
-                                <th data-field="id" class="text-center">User ID</th>
-                                <th data-field="name" data-sortable="true">Name</th>
-                                <th data-field="phone" data-sortable="true">Phone</th>
-                                <th data-field="email" data-sortable="true">Email</th>
-                                <th data-field="address" data-sortable="true">Address</th>
-                                <th data-field="roles" data-sortable="true">Role</th>
-                                <th data-field="status" data-sortable="true">Status</th>
-                                <th data-field="actions" class="td-actions text-right">Actions
+                                <th data-field="id" class="text-center">ID</th>
+                                <th data-field="name" data-sortable="true">Име</th>
+                                <th data-field="phone" data-sortable="true">Телефон</th>
+                                <th data-field="email" data-sortable="true">Имейл</th>
+                                <th data-field="id_number" data-sortable="true">Лична карта</th>
+                                <th data-field="address" data-sortable="true">Адрес</th>
+                                <th data-field="roles" data-sortable="true">Роля</th>
+                                <th data-field="status" data-sortable="true">Статус</th>
+                                <th data-field="actions" class="td-actions text-right">Действия
                                 </th>
                                 </thead>
                                 <tbody>
@@ -39,18 +40,21 @@
                                                 <td>{{ $user->first_name." ".$user->last_name }}</td>
                                                 <td>{{ $user->phone }}</td>
                                                 <td>{{ $user->email }}</td>
+                                                <td>{{ $user->id_number }}</td>
                                                 <td>{{ $user->address }}</td>
+                                                
                                                 <td>
                                                         <button class="btn btn-default btn-xs btn-fill">{{ $user->role }}</button>
                                                 </td>
                                                 <td>
                                                     @if($user->status == 1)
-                                                        <button class="btn btn-success btn-xs btn-fill">Active</button>
+                                                        <button class="btn btn-success btn-xs btn-fill">Активен</button>
                                                     @else
-                                                        <button class="btn btn-default btn-xs btn-fill">Inactive
+                                                        <button class="btn btn-default btn-xs btn-fill">Неактивен
                                                         </button>
                                                     @endif
                                                 </td>
+                                                <td><a href="{{url('pdf/'. $user->invoice . '.pdf')}}">Фактура</a></td>
                                                 <td>
                                                     <div class="table-icons">
                                                         <a rel="tooltip" title="Edit"
@@ -66,7 +70,7 @@
                                                         <div class="collapse">
                                                             {!! Form::open(array('id' => 'delete-user', 'url' => 'admin/user/'.$user->id)) !!}
                                                             {{ Form::hidden('_method', 'DELETE') }}
-                                                            <button type="submit" class="btn btn-danger btn-ok">Delete</button>
+                                                            <button type="submit" class="btn btn-danger btn-ok">Изтриване</button>
                                                             {!! Form::close() !!}
                                                         </div>
                                                     </div>

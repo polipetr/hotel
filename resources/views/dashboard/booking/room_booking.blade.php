@@ -5,8 +5,8 @@
     <div class="db-cent-3">
         <div class="db-cent-table db-com-table">
             <div class="db-title">
-                <h3><img src="{{ asset("front/images/icon/dbc5.png") }}" alt=""/> My Room Bookings</h3>
-                <p>View all of your hotel room bookings here.</p>
+                <h3><img src="{{ asset("front/images/icon/dbc5.png") }}" alt=""/> Моите реервации</h3>
+                <p>Списък</p>
             </div>
             <div class="db-title">
                 @foreach ($errors->all() as $error)
@@ -20,14 +20,14 @@
             <table class="bordered responsive-table">
                 <thead>
                 <tr>
-                    <th>Room No</th>
-                    <th>Type</th>
-                    <th>Arrival</th>
-                    <th>Departure</th>
-                    <th>Total Cost</th>
-                    <th>Status</th>
-                    <th>Payment</th>
-                    <th>Action</th>
+                    <th>Номер на стая</th>
+                    <th>Тип</th>
+                    <th>Пристигане</th>
+                    <th>Напускане</th>
+                    <th>Цена</th>
+                    <th>Статус</th>
+                    <th>Плащане</th>
+                    <th>Действие</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -58,17 +58,17 @@
 
                     </td>
                     <td>@if($room_booking->status !== "pending")
-                        <a href="{{url('dashboard/room/booking/'.$room_booking->id.'/review')}}"><span class="label label-primary">Review</span></a>
+                        <a href="{{url('dashboard/room/booking/'.$room_booking->id.'/review')}}"><span class="label label-primary">Ревю</span></a>
                         @endif
                         @if($room_booking->status !== "cancelled")
-                            <a href="{{url('dashboard/room/booking/'.$room_booking->id.'/cancel')}}"><span class="label label-danger">Cancel</span></a>
+                            <a href="{{url('dashboard/room/booking/'.$room_booking->id.'/cancel')}}"><span class="label label-danger">Откажи</span></a>
                         @endif
                     </td>
 
                 </tr>
                     @empty
                     <tr>
-                        <td>Sorry, no bookings found.</td>
+                        <td>Няма резервации</td>
                     </tr>
                 @endforelse
                 </tbody>

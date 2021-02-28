@@ -6,20 +6,20 @@
         <div class="container">
             <div class="row">
                 <div class="page-head">
-                    <h2>Room Types</h2>
+                    <h2>Типове стаи</h2>
                     <div class="head-title">
                         <div class="hl-1"></div>
                         <div class="hl-2"></div>
                         <div class="hl-3"></div>
                     </div>
-                    <p>All available hotel rooms and suites are listed below</p>
+                    <p>Списък със свободни стаи</p>
                 </div>
 
             @forelse($room_types as $room_type)
                 <!--ROOM SECTION-->
                 <div class="room">
                     @if($room_type->cost_per_day !== $room_type->discountedPrice)
-                    <div class="ribbon ribbon-top-left"><span>Discount</span>
+                    <div class="ribbon ribbon-top-left"><span>Намаление</span>
                     </div>
                     @endif
                     <!--ROOM IMAGE-->
@@ -47,22 +47,22 @@
                             @endif
                             <p>
                                 @if($room_type->getAggregatedRating() == 0)
-                                    No Ratings Yet
+                                     Няма рейтинг
                                 @elseif($room_type->getAggregatedRating() <= 2)
                                 Below Average
                                 @elseif($room_type->getAggregatedRating() <= 3)
                                     Satisfactory
                                 @elseif($room_type->getAggregatedRating() <= 4)
-                                    Good
+                                    Добър
                                 @elseif($room_type->getAggregatedRating() <= 5)
-                                    Excellent
+                                    Отличен
                                 @endif
                                 {{$room_type->getAggregatedRating()}} / 5
                             </p>
                         </div>
                         <ul>
-                            <li>Max Adult : {{ $room_type->max_adult }}</li>
-                            <li>Max Child : {{ $room_type->max_child }}</li>
+                            <li>Max възрастни : {{ $room_type->max_adult }}</li>
+                            <li>Max Деца : {{ $room_type->max_child }}</li>
                             <li></li>
                             <li></li>
                         </ul>
@@ -88,7 +88,7 @@
                         <p>Non Refundable</p>
                     </div>
                     <!--ROOM BOOKING BUTTON-->
-                    <div class="r5 r-com"> <a href="{{url('/room_type/'.$room_type->id)}}" class="inn-room-book">Book</a> </div>
+                    <div class="r5 r-com"> <a href="{{url('/room_type/'.$room_type->id)}}" class="inn-room-book">Запази</a> </div>
                 </div>
                 <!--END ROOM SECTION-->
                 @empty
@@ -100,7 +100,7 @@
                         </div>
                         <!--ROOM RATING-->
                         <div class="r2 r-com">
-                            <h4>Master Suite</h4>
+                            <h4>Апартманет/h4>
                             <div class="r2-ratt"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <img src="images/h-trip.png" alt="" /> <span>Excellent  4.5 / 5</span> </div>
                             <ul>
                                 <li>Max Adult : 3</li>
@@ -112,40 +112,40 @@
                         <!--ROOM AMINITIES-->
                         <div class="r3 r-com">
                             <ul>
-                                <li>Ironing facilities</li>
-                                <li>Tea/Coffee maker</li>
-                                <li>Air conditioning</li>
-                                <li>Flat-screen TV</li>
-                                <li>Wake-up service</li>
+                                <li>Ютия</li>
+                                <li>Кафемашина</li>
+                                <li>Климатик</li>
+                                <li>Телевизор</li>
+                                <li>Събуждане по телефон</li>
                             </ul>
                         </div>
                         <!--ROOM PRICE-->
                         <div class="r4 r-com">
-                            <p>Price for 1 night</p>
-                            <p><span class="room-price-1">5000</span> <span class="room-price">$: 7000</span>
+                            <p>Цена за една нощ</p>
+                            <p><span class="room-price-1">120</span> <span class="room-price">$: 160</span>
                             </p>
-                            <p>Non Refundable</p>
+                            <p>Невъзвръщаема</p>
                         </div>
                         <!--ROOM BOOKING BUTTON-->
                         <div class="r5 r-com">
-                            <div class="r2-available">Available</div>
-                            <p>Price for 1 night</p> <a href="room-details-block.html" class="inn-room-book">Book</a> </div>
+                            <div class="r2-available">Свободен</div>
+                            <p>Цена за 1 нощ</p> <a href="room-details-block.html" class="inn-room-book">Резервирай</a> </div>
                     </div>
                     <!--END ROOM SECTION-->
                 <!--ROOM SECTION-->
                 <div class="room">
-                    <div class="ribbon ribbon-top-left"><span>Featured</span>
+                    <div class="ribbon ribbon-top-left"><span>Бъдещи</span>
                     </div>
                     <!--ROOM IMAGE-->
                     <div class="r1 r-com"><img src="images/room/2.jpg" alt="" />
                     </div>
                     <!--ROOM RATING-->
                     <div class="r2 r-com">
-                        <h4>Mini Suite</h4>
+                        <h4>Малък апртамент</h4>
                         <div class="r2-ratt"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <img src="images/h-trip.png" alt="" /> <span>Excellent  4.2 / 5</span> </div>
                         <ul>
-                            <li>Max Adult : 2</li>
-                            <li>Max Child : 2</li>
+                            <li>Max Възрастни : 2</li>
+                            <li>Max Деца : 2</li>
                             <li></li>
                             <li></li>
                         </ul>
@@ -153,24 +153,24 @@
                     <!--ROOM AMINITIES-->
                     <div class="r3 r-com">
                         <ul>
-                            <li>Ironing facilities</li>
-                            <li>Tea/Coffee maker</li>
-                            <li>Air conditioning</li>
-                            <li>Flat-screen TV</li>
-                            <li>Wake-up service</li>
+                        <li>Ютия</li>
+                                <li>Кафемашина</li>
+                                <li>Климатик</li>
+                                <li>Телевизор</li>
+                                <li>Събуждане по телефон</li>
                         </ul>
                     </div>
                     <!--ROOM PRICE-->
                     <div class="r4 r-com">
                         <p>Price for 1 night</p>
-                        <p><span class="room-price-1">4000</span> <span class="room-price">$: 4500</span>
+                        <p><span class="room-price-1">70</span> <span class="room-price">$: 120</span>
                         </p>
-                        <p>Non Refundable</p>
+                        <p>Невъзвръщаема</p>
                     </div>
                     <!--ROOM BOOKING BUTTON-->
                     <div class="r5 r-com">
-                        <div class="r2-available">Available</div>
-                        <p>Price for 1 night</p> <a href="room-details.html" class="inn-room-book">Book</a> </div>
+                        <div class="r2-available">Свободен</div>
+                        <p>Цена за нощувка</p> <a href="room-details.html" class="inn-room-book">Резервирай</a> </div>
                 </div>
                 <!--END ROOM SECTION-->
                 <!--ROOM SECTION-->
@@ -182,11 +182,11 @@
                     </div>
                     <!--ROOM RATING-->
                     <div class="r2 r-com">
-                        <h4>Ultra Deluxe</h4>
+                        <h4>Супер лукс</h4>
                         <div class="r2-ratt"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <img src="images/h-trip.png" alt="" /> <span>Excellent  3.9 / 5</span> </div>
                         <ul>
-                            <li>Max Adult : 4</li>
-                            <li>Max Child : 2</li>
+                            <li>Max Възрастни : 2</li>
+                            <li>Max Деца : 2</li>
                             <li></li>
                             <li></li>
                         </ul>
@@ -194,24 +194,24 @@
                     <!--ROOM AMINITIES-->
                     <div class="r3 r-com">
                         <ul>
-                            <li>Ironing facilities</li>
-                            <li>Tea/Coffee maker</li>
-                            <li>Air conditioning</li>
-                            <li>Flat-screen TV</li>
-                            <li>Wake-up service</li>
+                        <li>Ютия</li>
+                                <li>Кафемашина</li>
+                                <li>Климатик</li>
+                                <li>Телевизор</li>
+                                <li>Събуждане по телефон</li>
                         </ul>
                     </div>
                     <!--ROOM PRICE-->
                     <div class="r4 r-com">
                         <p>Price for 1 night</p>
-                        <p><span class="room-price-1">3500</span> <span class="room-price">$: 4000</span>
+                        <p><span class="room-price-1">190</span> <span class="room-price">$: 210</span>
                         </p>
-                        <p>Non Refundable</p>
+                        <p>Невъзвръщаема</p>
                     </div>
                     <!--ROOM BOOKING BUTTON-->
                     <div class="r5 r-com">
-                        <div class="r2-available">Available</div>
-                        <p>Price for 1 night</p> <a href="room-details-1.html" class="inn-room-book">Book</a> </div>
+                        <div class="r2-available">Свободен</div>
+                        <p>Цена за една нощ</p> <a href="room-details-1.html" class="inn-room-book">Запази</a> </div>
                 </div>
                 <!--END ROOM SECTION-->
                 <!--ROOM SECTION-->
@@ -225,8 +225,8 @@
                         <h4>Luxury Room</h4>
                         <div class="r2-ratt"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <img src="images/h-trip.png" alt="" /> <span>Excellent  4.0 / 5</span> </div>
                         <ul>
-                            <li>Max Adult : 5</li>
-                            <li>Max Child : 2</li>
+                            <li>Max Въздрастни : 5</li>
+                            <li>Max Деца : 2</li>
                             <li></li>
                             <li></li>
                         </ul>
@@ -234,11 +234,11 @@
                     <!--ROOM AMINITIES-->
                     <div class="r3 r-com">
                         <ul>
-                            <li>Ironing facilities</li>
-                            <li>Tea/Coffee maker</li>
-                            <li>Air conditioning</li>
-                            <li>Flat-screen TV</li>
-                            <li>Wake-up service</li>
+                        <li>Ютия</li>
+                                <li>Кафемашина</li>
+                                <li>Климатик</li>
+                                <li>Телевизор</li>
+                                <li>Събуждане по телефон</li>
                         </ul>
                     </div>
                     <!--ROOM PRICE-->
@@ -246,12 +246,12 @@
                         <p>Price for 1 night</p>
                         <p><span class="room-price-1">3000</span> <span class="room-price">$: 3500</span>
                         </p>
-                        <p>Non Refundable</p>
+                        <p>Невъзвръщаема</p>
                     </div>
                     <!--ROOM BOOKING BUTTON-->
                     <div class="r5 r-com">
-                        <div class="r2-available">Available</div>
-                        <p>Price for 1 night</p> <a href="room-details.html" class="inn-room-book">Book</a> </div>
+                        <div class="r2-available">Свободен</div>
+                        <p>Price for 1 night</p> <a href="room-details.html" class="inn-room-book">Запази</a> </div>
                 </div>
                 <!--END ROOM SECTION-->
                 <!--ROOM SECTION-->
@@ -275,11 +275,11 @@
                     <!--ROOM AMINITIES-->
                     <div class="r3 r-com">
                         <ul>
-                            <li>Ironing facilities</li>
-                            <li>Tea/Coffee maker</li>
-                            <li>Air conditioning</li>
-                            <li>Flat-screen TV</li>
-                            <li>Wake-up service</li>
+                        <li>Ютия</li>
+                                <li>Кафемашина</li>
+                                <li>Климатик</li>
+                                <li>Телевизор</li>
+                                <li>Събуждане по телефон</li>
                         </ul>
                     </div>
                     <!--ROOM PRICE-->
@@ -292,7 +292,7 @@
                     <!--ROOM BOOKING BUTTON-->
                     <div class="r5 r-com">
                         <div class="r2-available">Available</div>
-                        <p>Price for 1 night</p> <a href="room-details-block.html" class="inn-room-book">Book</a> </div>
+                        <p>Цена за една нощ</p> <a href="room-details-block.html" class="inn-room-book">Запази</a> </div>
                 </div>
                 <!--END ROOM SECTION-->
                 <!--ROOM SECTION-->
@@ -315,24 +315,25 @@
                     <!--ROOM AMINITIES-->
                     <div class="r3 r-com">
                         <ul>
-                            <li>Ironing facilities</li>
-                            <li>Tea/Coffee maker</li>
-                            <li>Air conditioning</li>
-                            <li>Flat-screen TV</li>
-                            <li>Wake-up service</li>
+                        <li>Ютия</li>
+                                <li>Кафемашина</li>
+                                <li>Климатик</li>
+                                <li>Телевизор</li>
+                                <li>Събуждане по телефон</li>
                         </ul>
                     </div>
                     <!--ROOM PRICE-->
                     <div class="r4 r-com">
                         <p>Price for 1 night</p>
-                        <p><span class="room-price-1">2000</span> <span class="room-price">$: 2500</span>
+                        <p><span class="room-price-1">600</span> <span class="room-price">$: 700</span>
                         </p>
-                        <p>Non Refundable</p>
+                        <p>Невъзвръщаема</p>
                     </div>
                     <!--ROOM BOOKING BUTTON-->
                     <div class="r5 r-com">
                         <div class="r2-available">Available</div>
-                        <p>Price for 1 night</p> <a href="room-details.html" class="inn-room-book">Book</a> </div>
+                        
+                        <p>Цена за една нощ</p> <a href="room-details.html" class="inn-room-book">Запази</a> </div>
                 </div>
                 <!--END ROOM SECTION-->
                 @endforelse

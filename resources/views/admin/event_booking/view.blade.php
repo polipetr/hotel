@@ -15,13 +15,13 @@
                             <table id="bootstrap-table" class="table">
                                 <thead>
                                 <th data-field="sn" class="text-center">S.N.</th>
-                                <th data-field="event" class="text-center">Event</th>
-                                <th data-field="event_date" class="text-center">Event Date</th>
-                                <th data-field="no_of_tickets" class="text-center">No. of Tickets</th>
-                                <th data-field="booked_by" class="text-center">Booked By</th>
-                                <th data-field="status" data-sortable="true">Status</th>
-                                <th data-field="payment" data-sortable="true">Payment</th>
-                                <th data-field="actions" class="td-actions text-right">Actions
+                                <th data-field="event" class="text-center">Събитие</th>
+                                <th data-field="event_date" class="text-center">Дата</th>
+                                <th data-field="no_of_tickets" class="text-center">Номер на билета</th>
+                                <th data-field="booked_by" class="text-center">Резервирано на</th>
+                                <th data-field="status" data-sortable="true">Статус</th>
+                                <th data-field="payment" data-sortable="true">Плащане</th>
+                                <th data-field="actions" class="td-actions text-right">Действие
                                 </th>
                                 </thead>
                                 <tbody>

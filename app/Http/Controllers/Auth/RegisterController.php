@@ -75,6 +75,8 @@ class RegisterController extends Controller
             'role' => 'user',
             'avatar' => $available_avatars[array_rand($available_avatars)],
             'password' => bcrypt($data['password']),
+            'id_number' =>$data['id_number'],
+            'address' =>$data['address']
         ]);
     }
 }

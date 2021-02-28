@@ -51,7 +51,7 @@ return [
             'icon' => 'ti-crown'
         ],
         'user' => [
-            'name' => 'Потребители',
+            'name' => 'Гости',
             'actions' => [
                 'view' => 'admin/user',
             ],
