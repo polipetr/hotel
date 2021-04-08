@@ -14,6 +14,13 @@ return [
     */
 
     'admin' => [
+        'account' => [
+            'name' =>  'Създаване на акоунт',
+            'actions' => [
+                'view' => 'admin/account',
+            ],
+            'icon' => 'ti-user'
+        ],
         'booking' => [
             'name' =>  'Резервация',
             'actions' => [
