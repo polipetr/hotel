@@ -21,6 +21,20 @@ return [
             ],
             'icon' => 'ti-user'
         ],
+        'clear' => [
+            'name' =>  'Изчистване на данните',
+            'actions' => [
+                'view' => 'admin/clear',
+            ],
+            'icon' => 'ti-trash'
+        ],
+        'Grafic' => [
+            'name' =>  'Графика на заетост',
+            'actions' => [
+                'view' => 'admin/grafic',
+            ],
+            'icon' => 'ti-bar-chart'
+        ],
         'booking' => [
             'name' =>  'Резервация',
             'actions' => [

@@ -56,7 +56,7 @@ Route::group(['prefix' => 'dashboard'], function () {
 
 // Routes for Admin
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-    Route::get('/', 'Admin\HomeController@index');
+    Route::get('/', 'Admin\HomeController@index')->name('home');
     Route::resource('slider', 'Admin\SliderController');
     Route::resource('facility', 'Admin\FacilityController');
     Route::resource('event', 'Admin\EventController');
@@ -78,9 +78,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/room_booking/{id}/edit', 'Admin\RoomBookingController@edit');
     Route::put('/room_booking/{id}/edit', 'Admin\RoomBookingController@update');
 
-    Route::get('/account', 'Admin\AccountController@index')->name('account.view');;
+    Route::get('/account', 'Admin\AccountController@index')->name('account.view');
     Route::get('/account/create', 'Admin\AccountController@create')->name('account.create');
     Route::post('/account/create', 'Admin\AccountController@store')->name('account.store');
+
+    Route::get('/grafic', 'Admin\GraficController@index')->name('grafic.view');
+    Route::get('/clear', function () {
+        return redirect()->route('home');
+    
+    });
 
     Route::get('/reporting', 'Admin\ReportingController@index');
 

@@ -12,68 +12,69 @@ class FacilitiesTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('facilities')->truncate();
         DB::table('facilities')->insert([
-            'name' => "Air Conditioner",
+            'name' => "Климатик",
             'icon' => "air_conditioner.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Bathtub",
+            'name' => "Вана",
             'icon' => "bathtub.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Breakfast",
+            'name' => "Закуска",
             'icon' => "breakfast.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Computer",
+            'name' => "Компютър",
             'icon' => "computer.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "First Aid Kit",
+            'name' => "Медицинкси принадлежности",
             'icon' => "first_aid_kit.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Hair Dryer",
+            'name' => "Сешоар",
             'icon' => "hair_dryer.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Mini Bar",
+            'name' => "Мини бар",
             'icon' => "mini_bar.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Mini Cooler",
+            'name' => "Хладилник",
             'icon' => "mini_cooler.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Parking",
+            'name' => "Паркинг",
             'icon' => "parking.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Telephone",
+            'name' => "Телефон",
             'icon' => "telephone.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('facilities')->insert([
-            'name' => "Television",
+            'name' => "Телевизия",
             'icon' => "television.png",
             'status' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')

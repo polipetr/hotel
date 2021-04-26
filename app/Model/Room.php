@@ -13,6 +13,8 @@ class Room extends Model
      */
     protected $table = 'rooms';
 
+    protected $with = ['room_type', 'room_bookings'];
+
     protected $fillable = ['room_number', 'description', 'available', 'status', 'room_type_id'];
 
 

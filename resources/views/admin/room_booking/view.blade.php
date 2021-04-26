@@ -18,7 +18,7 @@
                                 <th data-field="room_number" class="text-center">Номер на стая.</th>
                                 <th data-field="room_type" class="text-center">Тип</th>
                                 <th data-field="booked_by" class="text-center">Запазена от</th>
-                                <th data-field="pay_method" data-sortable="true">Наяин на плащане</th>
+                                <th data-field="pay_method" data-sortable="true">Начин на плащане</th>
                                 <th data-field="status" data-sortable="true">Статус</th>
                                 <th data-field="payment" data-sortable="true">Платена</th>
                                 <th data-field="actions" class="td-actions text-right">Действия
@@ -31,7 +31,7 @@
                                             <tr>
                                                 <td>{{$index+1}}</td>
                                                 <td>{{ $room_booking->room->room_number }}</td>
-                                                <td>{{ $room_booking->room->room_type->name }}</td>
+                                                <td>{{ $room_booking->room->room_type->name ?? '' }}</td>
                                                 <td>{{ $room_booking->user->first_name." ".$room_booking->user->last_name }}<br>
                                                     <strong>Email: </strong>{{ $room_booking->user->email }}
                                                 </td>
